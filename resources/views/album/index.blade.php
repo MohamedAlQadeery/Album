@@ -8,10 +8,10 @@
                 Welcome {{\Illuminate\Support\Facades\Auth::user()->name}}
             @endauth
 
-            @guest
+            @unless(\Illuminate\Support\Facades\Auth::check())
                 Welcome Guest .. to continue using our website you need to login
 
-            @endguest
+            @endunless
         </h3>
 
         @guest
